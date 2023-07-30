@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import { useSelector } from "react-redux";
+
 import { useNavigate } from "react-router-dom";
 
 import { useAddNewEntryMutation } from "./entriesSlice";
-import { set } from "date-fns";
+
 import useAuth from "../../hooks/useAuth";
 
 const NewEntriesForm = () => {
@@ -12,7 +12,7 @@ const NewEntriesForm = () => {
   const navigate = useNavigate()
   
   const [addNewEntry] = useAddNewEntryMutation()
-  /* const users = useSelector(selectAllUsers); */
+  
 
   const [title, setTitle] = useState('');
   const [content, setContent] = useState('');
